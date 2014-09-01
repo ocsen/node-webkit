@@ -257,8 +257,6 @@ void Window::Call(const std::string& method,
     int id;
     if (arguments.GetInteger(0, &id))
       shell_->window()->SetMenu(dispatcher_host()->GetApiObject<Menu>(id));
-  } else if (method == "ClearMenu") {
-    shell_->window()->ClearMenu();
   } else if (method == "Reload") {
     int type;
     if (arguments.GetInteger(0, &type))
